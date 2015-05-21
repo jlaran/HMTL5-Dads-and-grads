@@ -1,1 +1,59 @@
 //Sass variables goes here
+
+$opacityCero: 1;
+$opacityOne: 1;
+
+//Fonts
+$fontApexMedium: "Verizon Apex Medium", Helvetica, Arial, sans-serif;
+$fontApexBook: "Verizon Apex Book", Helvetica, Arial, sans-serif;
+$fontHelvetica: Helvetica, Arial, sans-serif;
+
+//Fonts Colors
+$colorGray: #333333;
+$verizonRed: #ed1c24;
+$colorWhite: #ffffff;
+
+//Font Sizes
+$collapsedTitle: 15px;
+$expandedTitles: 25px;
+
+$bulletsSize: 13px;
+
+//Position collapsed Title
+
+
+//Background Colors
+$BackgroundWhite: #ffffff;
+$BackgroundBlack: #000000;
+$BackgroundVerizonRed: #ed1c24;
+
+$BackgroundVerizonRed-Hover: #c81d1e;
+
+
+//Border Colors
+$borderGray: #333333;
+
+
+//Margins
+$verizonTabMargin: 11px;
+
+
+//Mixins
+
+//Red Button
+@mixin redButton($fontSize) {
+	font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    background: $BackgroundVerizonRed;
+    color: $colorWhite;
+    text-decoration: none;
+    font-size: $fontSize;
+    padding: 10px 18px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+@mixin redButtonHover() {
+    background: $BackgroundVerizonRed-Hover;
+}
