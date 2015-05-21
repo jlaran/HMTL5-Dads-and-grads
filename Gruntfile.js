@@ -131,7 +131,8 @@ module.exports = function( grunt )
 		    options: {
 		      livereload: true,
 		      base: 'dest',
-		      port: 9009
+		      port: 9009,
+		      open: true
 		    }
 		  }
 		},
