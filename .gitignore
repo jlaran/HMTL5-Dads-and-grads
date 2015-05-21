@@ -1,10 +1,17 @@
-# Build and Release Folders
+# Ignore this files
+
 .DS_Store
-node_modules
 README.md
 /readme.html
 /license.txt
 *.md
 node_modules
 .sass-cache
+Gruntfile.js
+package.json
+
+# Ignore this folders
+
+node_modules/
+.sass-cache/
 dest/
