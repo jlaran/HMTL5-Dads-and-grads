@@ -30,7 +30,7 @@ body {
 		top: 10px;
 		left: 78px;
 		color: $colorGray;
-		opacity: 1;
+		opacity: $opacityCero;
 	}
 
 	h2 {
@@ -39,7 +39,7 @@ body {
 	    top: 28px;
 	    left: 78px;
 	    color: $colorGray;
-	    opacity: 1;
+	    opacity: $opacityCero;
 	}
 
 	span {
@@ -50,7 +50,7 @@ body {
 	    top: 34px;
 	    right: 10px;
 	    color: $verizonRed;
-	    opacity: 1;
+	    opacity: $opacityCero;
 	}
 
 	#logo_collapse {
@@ -69,7 +69,7 @@ body {
     width: 318px;
     height: 458px;
     background: $BackgroundWhite;
-    //display: none;
+    display: none;
     opacity: $opacityCero;
     overflow: hidden;
     border: 1px $colorGray solid;
@@ -96,52 +96,125 @@ body {
 	    max-width: 130px;
 	    background: url(../img/logo-verizon.svg) no-repeat;
 	    opacity: $opacityCero;
-	    z-index: 100;
+	    position: absolute;
+	    z-index: 7;
 	}
 
 	#info {
+
+		.device_fte_frame {
+			position: absolute;
+			width: 237px;
+		    height: 451px;
+			top: -70%;
+		    left: 0;
+		    right: 0;
+		    margin: 0 auto;
+		    z-index: 6;
+		    opacity: $opacityCero;
+		    transform:scale(0.7,0.7);
+
+		    .device_bck {
+				background: url(../img/deviceN_bck.jpg) no-repeat;
+				background-size: contain;
+				width: 237px;
+			    height: 451px;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    @include border-radius(20px);
+			    opacity: $opacityCero;
+			}
+
+		    .device_fte {
+				background: url(../img/deviceN_fte.jpg) no-repeat;
+				width: 237px;
+			    height: 451px;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    @include border-radius(30px);
+				
+				#lifestyle {
+					background: url(../img/lifestyle_dads.jpg) no-repeat;
+					width: 210px;
+					height: 369px;
+					position: absolute;
+					top: 30px;
+					left: 11px;
+					z-index: 100;
+				}
+			}
+
+			.shadow {
+				background: url(../img/shadow.jpg) no-repeat;
+				width: 270px;
+				height: 50px;
+				position: absolute;
+				top: 426px;
+				left: -18px;
+				right: 0;
+				z-index: -1;
+				background-size: cover;
+				margin: 0 auto;
+			}
+		}
 
 		.titles {
 		    position: absolute;
 		    width: 100%;
 		    left: $verizonTabMargin;
 		    font-size: $expandedTitles;
-		    opacity: opacityCero;
+		    opacity: $opacityCero;
 		    text-align: left;
 		}
 
 		#f1 {
 			#f1_txt1 {
 				top: 390px;
+				left: -270px;
 			}
 
 			#f1_txt2 {
 				top: 421px;
+				left: -270px;
 			}
+
+			display: block;
 		}
 
 		#f2 {
 			#f2_txt1 {
 				top: 390px;
+				left: -270px;
 			}
 
 			#f2_txt2 {
 				top: 421px;
+				left: -270px;
 			}
+
+			display: block;
 		}
 
 		#f3 {
+
 			#f3_txt1 {
 				top: 157px;
+				left: -270px;
 			}
 
 			#f3_txt2 {
 				top: 188px;
+				left: -270px;
 			}
 
 			#f3_txt3 {
 				top: 219px;
+				left: -270px;
 			}
+
+			display: block;
 		}
 
 		#f4 {

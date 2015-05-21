@@ -1,6 +1,6 @@
 //Sass variables goes here
 
-$opacityCero: 1;
+$opacityCero: 0;
 $opacityOne: 1;
 
 //Fonts
@@ -35,7 +35,7 @@ $borderGray: #333333;
 
 
 //Margins
-$verizonTabMargin: 11px;
+$verizonTabMargin: 9px;
 
 
 //Mixins
@@ -56,4 +56,11 @@ $verizonTabMargin: 11px;
 
 @mixin redButtonHover() {
     background: $BackgroundVerizonRed-Hover;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
 }
