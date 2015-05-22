@@ -7,10 +7,20 @@ var banner = new Banner({
 	hotspotClose: ["#generalClose"],
 	hotspotExpand: ["#collapse-banner"],
 	elementsToRegister: [
-
+		{eventType: "click", element: ".blue", functionToCall: "tapBlue"},
+		{eventType: "click", element: ".orange", functionToCall: "tapOrange"},
+		{eventType: "click", element: ".violet", functionToCall: "tapViolet"},
 	],
 	customFunctions: {
-
+		tapBlue: function(){
+			console.log("Blue Tapped");
+		},
+		tapOrange: function(){
+			console.log("Orange Tapped");
+		},
+		tapViolet: function(){
+			console.log("Violet Tapped");
+		}
 	},
 	animations: {
 		firstFrame : function(){
@@ -20,7 +30,7 @@ var banner = new Banner({
 							.to("#collapse-banner span", 0.5, {opacity: 1});
 		},
 		secondFrame : function(){
-			var tlDevice = new TimelineMax({repeat:0, repeatDelay:0, onUpdate:updateStats, onRepeat:updateReps, onComplete:restart});
+			var tlDevice = new TimelineMax();
 
 				//Frame 1
 				tlDevice.to("#logo", 1, {opacity:1}, 0)
@@ -54,25 +64,40 @@ var banner = new Banner({
 						//Frame 4
 						.to("#f4_txt1", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=0.5")
 						.to("#f4_txt2", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=1")
-						.to("#f4_txt3", 0.4, {opacity:1, top:"80%",ease:Power2.easeOut}, "=0.5")
 
-						.to(".color.blue", 0.7, {opacity:1})
-						.to(".color.orange", 0.5, {opacity:1}, "-=0.4")
-						.to(".color.violet", 0.3, {opacity:1}, "-=0.2")
+						.to(".blue", 0.7, {opacity:1}, "-=0.5")
+						.to(".orange", 0.5, {opacity:1}, "-=0.3")
+						.to(".violet", 0.3, {opacity:1}, "-=0.1")
+
+						.to("#f4_txt3", 0.4, {opacity:1, top:"80%",ease:Power2.easeOut})
 
 						.to("#f4_txt1", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeInOut})
 						.to("#f4_txt2", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeInOut}, "-=3.7")
 						.to("#f4_txt3", 0.4, {delay:3, opacity:0, top:"90%",ease:Power2.easeInOut}, "-=3.3")
 						
-						.to(".color.blue", 0.5, {delay:3, opacity:0}, "-=3.5")
-						.to(".color.orange", 0.5, {delay:3, opacity:0}, "-=3.5")
-						.to(".color.violet", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".blue", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".orange", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".violet", 0.5, {delay:3, opacity:0}, "-=3.5")
 
 						//Frame 5
 						.to(".device_fte_frame", 1, {top:"50%", ease:Power2.easeInOut})
-						.to("#f5_txt1", 0.7, {top:"25%", opacity:1, ease:Power2.easeInOut})
-						.to("#logo_droidturbo", 0.7, {opacity:1, ease:Power2.easeInOut})
+						.to("#Droid_logo", 0.7, {top:"35%", opacity:1, ease:Power2.easeInOut})
+						.to("#f5_txt1", 0.7, {top:"28%", opacity:1, ease:Power2.easeInOut}, "-=0.7")
+
+						//Frame 6
+						.to(".device_fte_frame", 1, {rotationY:0, ease:Power2.easeInOut, transformOrigin:"center center"})
+						.to(".device_fte", 0.1, {opacity: 1}, "-=0.5")
+						.to(".device_bck", 0.1, {opacity: 0}, "-=0.5")
+						.to("#lifestyle", 0.1, {opacity: 0}, "-=1")
+
+						//Frame 7
+						.set(".device_fte_frame", {perspective:370})
+						.to(".device_fte", 1, {scaleX:0.95, rotationY:-30, scaleY:1, ease:Power2.easeOut, transformOrigin:"center center"})
+						.to(".shadow", 1, {scaleX:0.95, rotationY:-30, scaleY:1, ease:Power2.easeOut, transformOrigin:"center center"}, "-=1")
+						.to(".device_fte", 0.3, {width:237, ease:Power0.easeOut}, "-=0.8")
+
 						
+
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();

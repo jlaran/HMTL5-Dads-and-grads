@@ -103,11 +103,16 @@ body {
 	#info {
 
 		#Droid_logo {
-			background: url(../img/logo_droidturbo.jpg) no-repeat;
+			background: url(../img/logo_droidturbo.svg) no-repeat;
 			width: 145px;
 			height: 48px;
+			position: absolute;
+			top: 38%;
+			left: 0;
+			right: 0;
 			display: block;
 			margin: 0 auto;
+			opacity: $opacityCero;
 		}
 
 		.device_fte_frame {
@@ -136,7 +141,7 @@ body {
 
 		    .device_fte {
 				background: url(../img/deviceN_fte.jpg) no-repeat;
-				width: 237px;
+				width: 233px;
 			    height: 451px;
 			    position: absolute;
 			    top: 0;
@@ -306,23 +311,14 @@ body {
 
 		#f5 {
 			#f5_txt1 {
-				top: 126px;
+				top: 30%;
 				text-align: center;
 				left: 0;
 				right: 0;
 				font-size: 20px;
 
 			}
-			#logo_droidturbo {
-				background: url(../img/logo_droidturbo.jpg) no-repeat;
-				width: 145px;
-				height: 48px;
-				display: block;
-				margin: 0 auto;
-				top: 230px;
-			    opacity: $opacityCero;
 
-			}
 			display: block;
 		}
 
@@ -344,7 +340,6 @@ body {
 				left: 0;
 				right: 0;
 				font-size: 20px;
-
 			}
 		}
 
