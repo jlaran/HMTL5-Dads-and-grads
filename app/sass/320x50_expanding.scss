@@ -345,21 +345,25 @@ body {
 
 		#f8 {
 			#f8_txt1 {
-				top: 126px;
+				top: 166px;
 				text-align: left;
 				left: $verizonTabMargin;
-				font-size: 23px;
+				font-size: 21px;
 				line-height: 26px;
-				width: 65%;
+				width: 54%;
+				left: -270px;
 			}
 
 			#f8_txt2 {
-				bottom: 11px;
+				bottom: -10px;
 				text-align: left;
 				left: $verizonTabMargin;
 				font-size: 13px;
 				line-height: 18px;
+				opacity: $opacityCero;
 			}
+
+			display: block;
 		}
 
 		#ff {
@@ -374,6 +378,7 @@ body {
 					@include redButton(13px);
 					top: 70px;
 					left: 25%;
+					opacity: $opacityCero;
 				}
 				
 				.Redbutton:hover {
@@ -397,17 +402,14 @@ body {
 								padding-top: 42px;
 								display: inline-block;
 								text-align: center;
+								opacity: $opacityCero;
 							}
 
-							.orange {
-								background: url(../img/dot_orange.jpg) no-repeat top center;
-							}
-
-							.blue {
+							.one {
 								background: url(../img/dot_blue.jpg) no-repeat top center;
 							}
 
-							.violet {
+							.two {
 								background: url(../img/dot_violet.jpg) no-repeat top center;
 							}
 						}
@@ -432,6 +434,7 @@ body {
 					font-size: $bulletsSize;
 					text-align: center;
 					top: 175px;
+					opacity: $opacityCero;
 				}
 			}
 		}
