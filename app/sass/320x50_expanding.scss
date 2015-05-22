@@ -220,19 +220,23 @@ body {
 		#f4 {
 			#f4_txt1 {
 				top: 157px;
+				left: -270px;
 			}
 
 			#f4_txt2 {
 				top: 188px;
+				left: -270px;
 			}
 			
 			#f4_txt3 {
-				bottom: 79px;
+				bottom: 70px;
 				text-align: center;
 				left: 0; 
 				right: 0;
 				margin: 0 auto;
 				font-size: $bulletsSize;
+			    opacity: $opacityCero;
+
 			}
 
 			#bullets {
@@ -246,7 +250,6 @@ body {
 				ul{
 					li {
 						position: absolute;
-
 						span {
 							cursor: pointer;
 							font-size: $bulletsSize;
@@ -259,16 +262,19 @@ body {
 						.orange {
 							color: #e89d79;
 							background: url(../img/dot_orange.jpg) no-repeat top center;
+							opacity: $opacityCero;
 						}
 
 						.blue {
 							color: #6693af;
 							background: url(../img/dot_blue.jpg) no-repeat top center;
+							opacity: $opacityCero;
 						}
 
 						.violet {
 							color: #c0208f;
 							background: url(../img/dot_violet.jpg) no-repeat top center;
+							opacity: $opacityCero;
 						}
 					}
 
@@ -287,6 +293,8 @@ body {
 					}
 				}
 			}
+
+			display: block;
 		}
 
 		#f5 {
@@ -298,6 +306,17 @@ body {
 				font-size: 20px;
 
 			}
+			#logo_droidturbo {
+				background: url(../img/logo_droidturbo.jpg) no-repeat;
+				width: 145px;
+				height: 48px;
+				display: block;
+				margin: 0 auto;
+				top: 230px;
+			    opacity: $opacityCero;
+
+			}
+			display: block;
 		}
 
 		#f6 {
@@ -428,3 +447,74 @@ body {
 	    }
 	}
 }
+/*--- stats init ---*/
+#stats {
+  font-family: Signika Negative, Asap, sans-serif;
+  font-weight:300;
+  font-size:10px;
+  //float:right;
+  color:#000;
+  //margin-left:20px;
+  width: 464px;
+  height: 215px;
+  position: absolute;
+  left: 330px;
+  top: 0px;
+  border: 1px solid black;
+  padding: 10px;
+  
+}
+
+#stats div {
+  margin-bottom:10px;
+  
+}
+
+#stats div span {
+  font-size:12px;
+  color:gray;
+}
+.buttons{
+  width: 520px;
+}
+#pause {
+  //position:absolute;
+  top:245px;
+  left:410px;
+}
+#play {
+  //position:absolute;
+  top:245px;
+  left:480px;
+}
+#prev{
+  //position:absolute;
+  top:245px;
+  left:540px;
+}
+#next{
+  //position:absolute;
+  top:245px;
+  left:600px;
+}
+#input{
+  //position:absolute;
+  top:245px;
+  left:720px;
+  width:63px;
+}
+#goto{
+  //position:absolute;
+  top:245px;
+  left:660px;
+}
+#restart {
+  visibility:hidden;
+}
+#slider{
+ //position: absolute;
+ left: 340px;
+ top: 320px;
+  width: 444px;
+}
+/*--- stats end ---*/

@@ -129,6 +129,28 @@
 		</div>
 	</div>
 
+<!-- stats init -->
+	<div id="stats">
+		<div>duration: <span id="duration">0</span> 1 iteration</div>
+		<div>totalDuration: <span id="totalDuration">0</span> all iterations including repeatDelays</div>
+		<div>repeat: <span id="repeatCount">0</span> of <span id="totalRepeatCount"></span></div>
+		<div>time: <span id="time">1</span></div>
+		<div>totalTime: <span id="totalTime">1</span></div>
+		<div>progress: <span id="progress">1</span></div>
+		<div>totalProgress: <span id="totalProgress">1</span></div>
+		<div class="buttons">
+			<button id="restart">restart</button>
+			<button id="pause">pause</button>
+			<button id="play">play</button>
+			<button id="prev">prev</button>
+			<button id="next">next</button>
+			<input id="input" type="number" name="goto" value="0" step="0.1" min="0"> 
+			<button id="goto">go to</button>
+			<input id="slider" type="range" value="0" step="0.01" min="0" max="100" oninput="showVal(this.value)" onchange="showVal(this.value)">
+		</div>	
+	</div>
+<!-- stats end -->
+
 	<script src="http://s0.2mdn.net/ads/studio/Enabler.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/cutback-js/2.0.0/cutback.min.js"></script>
