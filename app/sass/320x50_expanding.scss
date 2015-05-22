@@ -102,6 +102,14 @@ body {
 
 	#info {
 
+		#Droid_logo {
+			background: url(../img/logo_droidturbo.jpg) no-repeat;
+			width: 145px;
+			height: 48px;
+			display: block;
+			margin: 0 auto;
+		}
+
 		.device_fte_frame {
 			position: absolute;
 			width: 237px;
@@ -220,19 +228,22 @@ body {
 		#f4 {
 			#f4_txt1 {
 				top: 157px;
+				left: -270px;
 			}
 
 			#f4_txt2 {
 				top: 188px;
+				left: -270px;
 			}
 			
 			#f4_txt3 {
-				bottom: 79px;
+				bottom: 70px;
 				text-align: center;
 				left: 0; 
 				right: 0;
 				margin: 0 auto;
 				font-size: $bulletsSize;
+				opacity: $opacityCero;
 			}
 
 			#bullets {
@@ -259,16 +270,19 @@ body {
 						.orange {
 							color: #e89d79;
 							background: url(../img/dot_orange.jpg) no-repeat top center;
+							opacity: $opacityCero;
 						}
 
 						.blue {
 							color: #6693af;
 							background: url(../img/dot_blue.jpg) no-repeat top center;
+							opacity: $opacityCero;
 						}
 
 						.violet {
 							color: #c0208f;
 							background: url(../img/dot_violet.jpg) no-repeat top center;
+							opacity: $opacityCero;
 						}
 					}
 
@@ -287,6 +301,8 @@ body {
 					}
 				}
 			}
+
+			display: block;
 		}
 
 		#f5 {
@@ -348,14 +364,6 @@ body {
 				width: 170px;
 				position: absolute;
 				top: 195px;
-
-				#Droid_logo {
-					background: url(../img/logo_droidturbo.jpg) no-repeat;
-					width: 145px;
-					height: 48px;
-					display: block;
-					margin: 0 auto;
-				}
 
 				.Redbutton {
 					@include redButton(13px);

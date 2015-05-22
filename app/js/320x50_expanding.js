@@ -49,6 +49,27 @@ var banner = new Banner({
 						.to("#f3_txt2", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeOut}, "-=3.7")
 						.to("#f3_txt3", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeOut}, "-=3.7")
 						.to(".device_fte_frame", 0.7, {delay:3, top:"100%", ease:Power2.easeOut}, "-=3.7")
+
+						//Frame 4
+						.to("#f4_txt1", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=0.5")
+						.to("#f4_txt2", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=1")						
+						.to(".color.blue", 0.7, {opacity:1})
+						.to(".color.orange", 0.5, {opacity:1}, "-=0.4")
+						.to(".color.violet", 0.3, {opacity:1}, "-=0.2")
+						.to("#f4_txt3", 0.4, {opacity:1, top:"80%",ease:Power2.easeOut}, "=0.5")
+
+						.to("#f4_txt1", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeInOut})
+						.to("#f4_txt2", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeInOut}, "-=3.7")
+						.to(".color.blue", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".color.orange", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".color.violet", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to("#f4_txt3", 0.4, {delay:3, opacity:0, top:"90%",ease:Power2.easeInOut}, "-=3.3")
+
+
+						//Frame 5
+						.to(".device_fte_frame", 1, {top:"50%", ease:Power2.easeInOut})
+						.to("#f5_txt1", 0.7, {top:"25%", opacity:1, ease:Power2.easeInOut})
+						.to("#logo_droidturbo", 0.7, {opacity:1, ease:Power2.easeInOut})
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();
