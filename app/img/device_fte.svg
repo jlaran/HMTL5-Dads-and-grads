@@ -2,13 +2,15 @@
 <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
-<path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#CCCCCC" stroke-width="0.25" stroke-miterlimit="10" d="
-	M149,31.5c83.2-1.8,182.4-3.9,250-2c43,1.1,77.7-2.6,92,25c7.8,14.3,7,109.5,7,147c0,131.3-2,302.7-2,434c0,53.9,6,98.5-34,114
-	c-22.2,8.6-92.6,7-123,7c-47.7,0-52.3,0-100,0c-24.4,0-94-0.6-107-12c-16.9-14.8-16-60.4-16-97c0-92.7,0-185.3,0-278
-	c0-75.3,0-150.7,0-226C116,79.6,109,40.4,149,31.5z"/>
-<path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M434,41.5l1-5c0,0-58.3-3-126-3s-140,3-140,3l1,5c0,0,45.2-3,139-3
-	S434,41.5,434,41.5z"/>
-<path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M489,172.5l9,4v44l-7-2l-1,2l-3-2v-44L489,172.5z"/>
-<path fill-rule="evenodd" clip-rule="evenodd" fill="none" d="M498,254.5l-9-2l-2,1v107l3,4h7l1-6V254.5z"/>
+	 viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
+<g>
+	<path fill="none" stroke="#CCCCCC" stroke-width="0.25" stroke-miterlimit="10" d="M263.4,2.3c70-1.5,153.3-3.3,210.2-1.6
+		c36.1,1,65.3-2.2,77.4,21c6.5,12.1,5.9,92,5.9,123.6c0,110.4-1.6,254.5-1.6,364.9c0,45.4,5,82.8-28.6,95.9
+		c-18.7,7.2-77.9,5.9-103.4,5.9c-40.1,0-44,0-84.1,0c-20.6,0-79-0.5-90-10.1c-14.3-12.4-13.5-50.8-13.5-81.6c0-77.9,0-155.8,0-233.7
+		c0-63.3,0-126.6,0-190C235.6,42.8,229.8,9.8,263.4,2.3z"/>
+	<path fill="#FFFF00" d="M503,10.8l0.9-4.2c0,0-49-2.5-106-2.5S280.1,6.5,280.1,6.5l0.9,4.2c0,0,38-2.5,116.9-2.5S503,10.8,503,10.8
+		z"/>
+	<path fill="#FFFF00" d="M549.2,120.9l7.6,3.4v37l-5.9-1.6l-0.9,1.6l-2.5-1.6v-37L549.2,120.9z"/>
+	<path fill="#FFFF00" d="M556.8,189.9l-7.6-1.6l-1.6,0.9v90l2.5,3.4h5.9l0.9-5V189.9L556.8,189.9z"/>
+</g>
 </svg>

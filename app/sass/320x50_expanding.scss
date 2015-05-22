@@ -157,6 +157,27 @@ body {
 					left: 11px;
 					z-index: 100;
 				}
+
+				#colorize {
+					width: 233px;
+					height: 451px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1000;
+				}
+
+				.colorizeOrange {
+					color: #e89d79;
+				}
+
+				.colorizeBlue {
+					color: #6693af;
+				}
+
+				.colorizeViolet {
+					color: #c0208f;
+				}
 			}
 
 			.shadow {
