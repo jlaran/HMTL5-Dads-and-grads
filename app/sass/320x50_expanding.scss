@@ -287,7 +287,7 @@ body {
 				opacity: $opacityCero;
 			}
 
-			#bullets {
+			.bullets {
 				position: absolute;
 				top: 280px;
 				width: 70%;
@@ -410,6 +410,51 @@ body {
 				position: absolute;
 				top: 195px;
 
+				.bullets {
+					position: absolute;
+					top: 120px;
+					width: 125px;
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+
+					ul{
+						li {
+							span {
+								cursor: pointer;
+								font-size: $bulletsSize;
+								width: 50px;
+								padding-top: 42px;
+								display: inline-block;
+								text-align: center;
+							}
+
+							.orange {
+								color: #e89d79;
+								background: url(../img/dot_orange.jpg) no-repeat top center;
+								opacity: $opacityCero;
+							}
+
+							.blue {
+								color: #6693af;
+								background: url(../img/dot_blue.jpg) no-repeat top center;
+								opacity: $opacityCero;
+							}
+
+							.violet {
+								color: #c0208f;
+								background: url(../img/dot_violet.jpg) no-repeat top center;
+								opacity: $opacityCero;
+							}
+						}
+
+						li:first-child {
+							margin-right: 13px;
+							margin-left: 7px;
+						}
+					}
+				}
+
 				.Redbutton {
 					@include redButton(13px);
 					top: 70px;
@@ -419,51 +464,6 @@ body {
 				
 				.Redbutton:hover {
 					@include redButtonHover();	
-				}
-				
-				#bullets-left {
-					position: absolute;
-					top: 120px;
-					width: 100%;
-					left: 22%;
-
-					ul{
-						li {
-							position: absolute;
-
-							span {
-								cursor: pointer;
-								font-size: $bulletsSize;
-								width: 50px;
-								padding-top: 42px;
-								display: inline-block;
-								text-align: center;
-								opacity: $opacityCero;
-							}
-
-							.one {
-								background: url(../img/dot_blue.jpg) no-repeat top center;
-							}
-
-							.two {
-								background: url(../img/dot_violet.jpg) no-repeat top center;
-							}
-						}
-
-						li:first-child {
-							z-index: 1;
-						}
-
-						li:last-child {
-							right: 0;
-						}
-
-						li:nth-child(2) {
-							left: 0;
-							right: 0;
-							text-align: center;
-						}
-					}
 				}
 
 				#ff_txt1 {

@@ -7,16 +7,21 @@ var banner = new Banner({
 	hotspotClose: ["#generalClose"],
 	hotspotExpand: ["#collapse-banner"],
 	elementsToRegister: [
-		{eventType: "click", element: ".blue", functionToCall: "tapped"},
+		{eventType: "click", element: ".color", functionToCall: "tapped"},
 		{eventType: "click", element: ".orange", functionToCall: "tapped"},
 		{eventType: "click", element: ".violet", functionToCall: "tapped"},
-		{eventType: "click", element: ".one", functionToCall: "tapped"},
-		{eventType: "click", element: ".two", functionToCall: "tapped"}
+		{eventType: "click", element: ".secondBlue", functionToCall: "tapped"},
+		{eventType: "click", element: ".secondViolet", functionToCall: "tapped"},
+		{eventType: "click", element: ".secondOrange", functionToCall: "tapped"}
 	],
 	customFunctions: {
 		tapped: function(){
+			colorArray = ["blue", "orange", "violet"];
+
 			color = this.className.split(" ")[1];
-			console.log(color);
+
+			var indexOfColor = colorArray.indexOf(color);
+			colorArray.splice(indexOfColor, 1);
 
 			var deviceFront = document.getElementById("colorize-fte");
 			deviceFront.style.background = "url(img/device_fte-"+color+".svg) no-repeat";
@@ -26,7 +31,18 @@ var banner = new Banner({
 			deviceBack.style.background = "url(img/device_bck-"+color+".svg) no-repeat";
 			deviceBack.style.backgroundSize = "237px 451px";
 
-			tlDevice.seek("frame2");
+			document.querySelectorAll("#finalBullets .color")[0].parentElement.style.display = "none";
+			document.querySelectorAll("#finalBullets .color")[1].parentElement.style.display = "none";
+			document.querySelectorAll("#finalBullets .color")[2].parentElement.style.display = "none";
+
+			var bulletsLeft = document.getElementById("finalBullets");
+			
+			document.querySelector("#finalBullets ."+colorArray[0]).parentElement.style.display = "inline-block";
+			document.querySelector("#finalBullets ."+colorArray[1]).parentElement.style.display = "inline-block";
+	
+			tlDevice.seek("frame5");
+
+			console.log("tapped");
 		}
 	},
 	animations: {
@@ -83,9 +99,9 @@ var banner = new Banner({
 						.to("#f4_txt1", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=0.5")
 						.to("#f4_txt2", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=1")
 
-						.to("#bullets .blue", 0.7, {opacity:1}, "-=0.5")
-						.to("#bullets .orange", 0.5, {opacity:1}, "-=0.3")
-						.to("#bullets .violet", 0.3, {opacity:1}, "-=0.1")
+						.to(".bullets .blue", 0.7, {opacity:1}, "-=0.5")
+						.to(".bullets .orange", 0.5, {opacity:1}, "-=0.3")
+						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 
 						.to("#f4_txt3", 0.4, {opacity:1, top:"80%",ease:Power2.easeOut})
 
@@ -95,9 +111,9 @@ var banner = new Banner({
 						.to("#f4_txt2", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeInOut}, "-=3.7")
 						.to("#f4_txt3", 0.4, {delay:3, opacity:0, top:"90%",ease:Power2.easeInOut}, "-=3.3")
 
-						.to("#bullets .blue", 0.5, {delay:3, opacity:0}, "-=3.5")
-						.to("#bullets .orange", 0.5, {delay:3, opacity:0}, "-=3.5")
-						.to("#bullets .violet", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".bullets .blue", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".bullets .orange", 0.5, {delay:3, opacity:0}, "-=3.5")
+						.to(".bullets .violet", 0.5, {delay:3, opacity:0}, "-=3.5")
 						.set("#f4", {display:"none"})
 
 						//Frame 5
@@ -149,8 +165,9 @@ var banner = new Banner({
 						.set("#Droid_logo", {left:"-42%"}, "-=1.7")
 						.to("#Droid_logo", 0.7, {delay:1, top: "44%", opacity:1, ease:Power2.easeOut}, "-=1.5")
 						.to("#ff-cta", 0.7, {opacity:1}, "-=0.5")
-						.to("#bullets-left .one", 0.7, {opacity:1}, "-=0.5")
-						.to("#bullets-left .two", 0.7, {opacity:1}, "-=0.5")
+						.to(".bullets .blue", 0.7, {opacity:1}, "-=0.5")
+						.to(".bullets .orange", 0.5, {opacity:1}, "-=0.3")
+						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");
 
 						tlDevice.seek("frame4");
