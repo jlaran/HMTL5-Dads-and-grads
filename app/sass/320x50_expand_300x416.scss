@@ -1,6 +1,10 @@
 //Sass code goes here 
  @import 'variables';
 
+.hideGrads {
+	display: none;
+}
+
 p, h1, h2, h3, h4, a {
 	color: $colorGray;
 }
