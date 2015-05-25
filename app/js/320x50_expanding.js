@@ -17,7 +17,16 @@ var banner = new Banner({
 		tapped: function(){
 			color = this.className.split(" ")[1];
 			console.log(color);
-			tlDevice.seek("frame5");
+
+			var deviceFront = document.getElementById("colorize-fte");
+			deviceFront.style.background = "url(img/device_fte-"+color+".svg) no-repeat";
+			deviceFront.style.backgroundSize = "237px 451px";
+
+			var deviceBack = document.getElementById("colorize-bck");
+			deviceBack.style.background = "url(img/device_bck-"+color+".svg) no-repeat";
+			deviceBack.style.backgroundSize = "237px 451px";
+
+			tlDevice.seek("frame2");
 		}
 	},
 	animations: {
@@ -117,6 +126,7 @@ var banner = new Banner({
 						.to(".device_fte", 1, {delay: 0.5, scaleX:0.95, rotationY:-30, scaleY:1, ease:Power2.easeOut, transformOrigin:"center center"})
 						.to(".shadow", 1, {scaleX:0.95, rotationY:-30, scaleY:1, ease:Power2.easeOut, transformOrigin:"center center"}, "-=1")
 						.to(".device_fte", 0.3, {width:237, ease:Power0.easeOut}, "-=0.7")
+						.to("#colorize-fte", 0.3, {width:237, ease:Power0.easeOut}, "-=0.7")
 
 						.to("#f7_txt1", 0.5, {delay:1, top:"23%", opacity:0, ease:Power2.easeInOut}, "-=1.7")
 						.to("#Droid_logo", 0.5, {delay:1, top:"30%", opacity:0, ease:Power2.easeOut}, "-=1.5")
@@ -141,7 +151,9 @@ var banner = new Banner({
 						.to("#ff-cta", 0.7, {opacity:1}, "-=0.5")
 						.to("#bullets-left .one", 0.7, {opacity:1}, "-=0.5")
 						.to("#bullets-left .two", 0.7, {opacity:1}, "-=0.5")
-						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");				
+						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");
+
+						tlDevice.seek("frame4");
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();

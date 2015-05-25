@@ -137,6 +137,18 @@ body {
 			    left: 0;
 			    @include border-radius(20px);
 			    opacity: $opacityCero;
+
+			    #colorize-bck {
+					background: url(../img/device_bck-orange.svg) no-repeat;
+					background-size: 237px 451px;
+					width: 237px;
+					height: 451px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1000;
+					opacity: 0.8;
+				}
 			}
 
 		    .device_fte {
@@ -158,13 +170,16 @@ body {
 					z-index: 100;
 				}
 
-				#colorize {
+				#colorize-fte {
+					background: url(../img/device_fte-orange.svg) no-repeat;
+					background-size: 237px 451px;
 					width: 233px;
 					height: 451px;
 					position: absolute;
 					top: 0;
 					left: 0;
 					z-index: 1000;
+					opacity: 0.8;
 				}
 
 				.colorizeOrange {
