@@ -1,10 +1,8 @@
 //JS code goes here
 
 var banner = new Banner({
-	type: "expand",
+	type: "in-app",
 	expand: true,
-	finalExpandSize: [0,0,320,460],
-	hotspotClose: ["#generalClose"],
 	hotspotExpand: ["#collapse-banner"],
 	elementsToRegister: [
 		{eventType: "click", element: ".color", functionToCall: "tapped"},

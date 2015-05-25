@@ -74,18 +74,18 @@ body {
     overflow: hidden;
     border: 1px $colorGray solid;
 
-	#generalClose {
-	    width: 20px;
-	    height: 20px;
-	    background: url(../img/close.png);
-	    background-size: contain;
-	    position: absolute;
-	    z-index: 1000;
-	    top: 5px;
-	    right: 5px;
-	    display: block;
-	    cursor: pointer;
-	}
+	// #generalClose {
+	//     width: 20px;
+	//     height: 20px;
+	//     background: url(../img/close.png);
+	//     background-size: contain;
+	//     position: absolute;
+	//     z-index: 1000;
+	//     top: 5px;
+	//     right: 5px;
+	//     display: block;
+	//     cursor: pointer;
+	// }
 
 	#logo {
 	    margin-left: $verizonTabMargin;
