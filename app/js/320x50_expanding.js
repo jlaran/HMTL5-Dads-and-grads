@@ -35,14 +35,18 @@ var banner = new Banner({
 			document.querySelectorAll("#finalBullets .color")[1].parentElement.style.display = "none";
 			document.querySelectorAll("#finalBullets .color")[2].parentElement.style.display = "none";
 
+			document.querySelectorAll("#finalBullets .color")[0].parentElement.classList.remove("firstChild");
+			document.querySelectorAll("#finalBullets .color")[1].parentElement.classList.remove("firstChild");
+			document.querySelectorAll("#finalBullets .color")[2].parentElement.classList.remove("firstChild");
+
 			var bulletsLeft = document.getElementById("finalBullets");
 			
 			document.querySelector("#finalBullets ."+colorArray[0]).parentElement.style.display = "inline-block";
 			document.querySelector("#finalBullets ."+colorArray[1]).parentElement.style.display = "inline-block";
-	
-			tlDevice.seek("frame5");
 
-			console.log("tapped");
+			document.querySelector("#finalBullets ."+colorArray[0]).parentElement.classList.add("firstChild");
+
+			tlDevice.seek("frame5");
 		}
 	},
 	animations: {
