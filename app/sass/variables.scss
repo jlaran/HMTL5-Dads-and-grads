@@ -14,10 +14,12 @@ $verizonRed: #ed1c24;
 $colorWhite: #ffffff;
 
 //Font Sizes
-$collapsedTitle: 15px;
-$expandedTitles: 25px;
+$collapsedTitle: 15;
+$expandedTitles: 25;
 
-$bulletsSize: 13px;
+$bulletsSize: 13;
+
+$expandedTitles300: ($expandedTitles - 2);
 
 //Position collapsed Title
 

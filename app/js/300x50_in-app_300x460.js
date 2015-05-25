@@ -1,7 +1,7 @@
 //JS code goes here
 
 var banner = new Banner({
-	type: "expanding",
+	type: "expand",
 	expand: true,
 	finalExpandSize: [0,0,320,460],
 	hotspotClose: ["#generalClose"],
@@ -12,7 +12,8 @@ var banner = new Banner({
 		{eventType: "click", element: ".violet", functionToCall: "tapped"},
 		{eventType: "click", element: ".secondBlue", functionToCall: "tapped"},
 		{eventType: "click", element: ".secondViolet", functionToCall: "tapped"},
-		{eventType: "click", element: ".secondOrange", functionToCall: "tapped"}
+		{eventType: "click", element: ".secondOrange", functionToCall: "tapped"},
+		{eventType: "click", element: "#ff-cta", functionToCall: "exitShop"}
 	],
 	customFunctions: {
 		tapped: function(){
@@ -46,7 +47,22 @@ var banner = new Banner({
 
 			document.querySelector("#finalBullets ."+colorArray[0]).parentElement.classList.add("firstChild");
 
-			tlDevice.seek("frame5");
+			if(firstTime == true){
+				tlContinue.restart();
+				firstTime = false;
+			} else {
+				tlContinue.seek("frame5");
+			}
+			
+		},
+		exitShop: function(){
+			Enabler.requestCollapse();
+		    Enabler.exit('ClickTag Shop Button');
+		    motionLibrary.resetWhenCloseOrExit();
+
+		    var collapse = new TimelineMax();
+            collapse.to("#expanded-banner", 0.3, {opacity:0, display: 'none'});
+            motionLibrary.resetWhenCloseOrExit();
 		}
 	},
 	animations: {
@@ -58,12 +74,15 @@ var banner = new Banner({
 		},
 		secondFrame : function(){
 			tlDevice = new TimelineMax();
+			tlContinue = new TimelineMax();
+
+			firstTime = true;
 
 				//Frame 1
 				tlDevice.to("#logo", 1, {opacity:1}, 0)
 						.set("#f1", {display:"block"})
-						.set(".device_fte_frame", {scale:0.7})
-						.to(".device_fte_frame", 1, {scale:0.7, top:"-5%", opacity:1, ease:Power2.easeOut}, "-=0.5")
+						.set(".device_fte_frame", {scale:0.6})
+						.to(".device_fte_frame", 1, {scale:0.6, top:"-5%", opacity:1, ease:Power2.easeOut})
 						.to("#f1_txt1", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=0.2")
 						.to("#f1_txt2", 1, {left:9, opacity:1, ease:Power2.easeOut}, "-=1")
 						.to("#f1_txt1", 0.7, {delay:2, left:370, opacity:0, ease:Power2.easeInOut})
@@ -107,17 +126,19 @@ var banner = new Banner({
 						.to(".bullets .orange", 0.5, {opacity:1}, "-=0.3")
 						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 
-						.to("#f4_txt3", 0.4, {opacity:1, top:"80%",ease:Power2.easeOut})
+						.to("#f4_txt3", 0.4, {opacity:1, top:"80%",ease:Power2.easeOut});
 
 						//-------------------PAUSE-----------------------//
 
-						.to("#f4_txt1", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeInOut})
-						.to("#f4_txt2", 0.7, {delay:3, left:370, opacity:0, ease:Power2.easeInOut}, "-=3.7")
-						.to("#f4_txt3", 0.4, {delay:3, opacity:0, top:"90%",ease:Power2.easeInOut}, "-=3.3")
+				tlContinue.pause();
 
-						.to(".bullets .blue", 0.5, {delay:3, opacity:0}, "-=3.5")
-						.to(".bullets .orange", 0.5, {delay:3, opacity:0}, "-=3.5")
-						.to(".bullets .violet", 0.5, {delay:3, opacity:0}, "-=3.5")
+				tlContinue.to("#f4_txt1", 0.7, {left:370, opacity:0, ease:Power2.easeInOut})
+						.to("#f4_txt2", 0.7, {left:370, opacity:0, ease:Power2.easeInOut}, "-=0.7")
+						.to("#f4_txt3", 0.4, {opacity:0, top:"90%",ease:Power2.easeInOut}, "-=0.7")
+
+						.to(".bullets .blue", 0.5, {opacity:0}, "-=0.7")
+						.to(".bullets .orange", 0.5, {opacity:0}, "-=0.5")
+						.to(".bullets .violet", 0.5, {opacity:0}, "-=0.3")
 						.set("#f4", {display:"none"})
 
 						//Frame 5
@@ -145,7 +166,7 @@ var banner = new Banner({
 						.set(".device_fte_frame", {perspective:370})
 						.to(".device_fte", 1, {delay: 0.5, scaleX:0.95, rotationY:-30, scaleY:1, ease:Power2.easeOut, transformOrigin:"center center"})
 						.to(".shadow", 1, {scaleX:0.95, rotationY:-30, scaleY:1, ease:Power2.easeOut, transformOrigin:"center center"}, "-=1")
-						.to(".device_fte", 0.3, {width:237, ease:Power0.easeOut}, "-=0.7")
+						.to(".device_fte", 0.3, {width:236, ease:Power0.easeOut}, "-=0.7")
 						.to("#colorize-fte", 0.3, {width:237, ease:Power0.easeOut}, "-=0.7")
 
 						.to("#f7_txt1", 0.5, {delay:1, top:"23%", opacity:0, ease:Power2.easeInOut}, "-=1.7")
@@ -174,7 +195,7 @@ var banner = new Banner({
 						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");
 
-						tlDevice.seek("frame4");
+						stats.setTimeline(tlContinue);
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();
@@ -183,7 +204,6 @@ var banner = new Banner({
         collapseStartAnimation: function(){
         	var collapse = new TimelineMax();
             collapse.to("#expanded-banner", 0.3, {opacity:0, display: 'none'});
-
             motionLibrary.resetWhenCloseOrExit();
         }
 	}
