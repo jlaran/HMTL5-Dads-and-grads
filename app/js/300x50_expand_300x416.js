@@ -63,7 +63,7 @@ var banner = new Banner({
 
 			document.querySelector("#finalBullets ."+colorArray[0]).parentElement.classList.add("firstChild");
 
-			document.getElementById("colorize-fte").width = "233px";
+			document.getElementById("colorize-fte").style.width = "233px";
 
 			if(firstTime == true){
 				tlContinue.restart();
@@ -212,7 +212,7 @@ var banner = new Banner({
 						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");
 
-						stats.setTimeline(tlDevice);
+						//stats.setTimeline(tlDevice);
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();
@@ -230,7 +230,7 @@ var banner = new Banner({
 				colorizeSVG[i].setAttribute("fill", "#FF3300");
 			};
 
-			document.getElementById("colorize-fte").width = "233px";
+			document.getElementById("colorize-fte").style.width = "233px";
         }
 	}
 });

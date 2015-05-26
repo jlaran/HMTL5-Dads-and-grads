@@ -3,7 +3,7 @@
 var banner = new Banner({
 	type: "expand",
 	expand: true,
-	finalExpandSize: [0,0,320,460],
+	finalExpandSize: [0,0,320,416],
 	hotspotClose: ["#generalClose"],
 	hotspotExpand: ["#collapse-banner"],
 	elementsToRegister: [
@@ -63,7 +63,7 @@ var banner = new Banner({
 
 			document.querySelector("#finalBullets ."+colorArray[0]).parentElement.classList.add("firstChild");
 
-			document.getElementById("colorize-fte").width = "233px";
+			document.getElementById("colorize-fte").style.width = "233px";
 
 			if(firstTime == true){
 				tlContinue.restart();
@@ -228,7 +228,7 @@ var banner = new Banner({
 				colorizeSVG[i].setAttribute("fill", "#FF3300");
 			};
 
-			document.getElementById("colorize-fte").width = "233px";
+			document.getElementById("colorize-fte").style.width = "233px";
         }
 	}
 });
