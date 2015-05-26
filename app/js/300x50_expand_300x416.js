@@ -30,21 +30,21 @@ var banner = new Banner({
 			switch(color) {
 				case "blue":
 					outputColor = "#006699";
+					Enabler.counter('Color Blue Selected');
 					break;
 				case "orange":
 					outputColor = "#FF3300";
+					Enabler.counter('Color Orange Selected');
 					break;
 				case "violet":
 					outputColor = "#C0208F";
+					Enabler.counter('Color Violet Selected');
 					break;
 				default:
 					break;
 			}
 
-			//console.log(colorizeSVG);
-
 			for (var i = 0; i < colorizeSVG.length; i++) {
-				console.log(colorizeSVG[i].getAttribute("fill"));
 				colorizeSVG[i].setAttribute("fill", outputColor);
 			};
 
@@ -69,7 +69,6 @@ var banner = new Banner({
 			} else {
 				tlContinue.seek("frame5");
 			}
-			
 		},
 		exitShop: function(){
 			Enabler.requestCollapse();
@@ -211,7 +210,7 @@ var banner = new Banner({
 						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");
 
-						stats.setTimeline(tlContinue);
+						//stats.setTimeline(tlContinue);
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();

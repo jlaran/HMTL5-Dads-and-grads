@@ -22,13 +22,29 @@ var banner = new Banner({
 			var indexOfColor = colorArray.indexOf(color);
 			colorArray.splice(indexOfColor, 1);
 
-			var deviceFront = document.getElementById("colorize-fte");
-			deviceFront.style.background = "url(img/device_fte-"+color+".svg) no-repeat";
-			deviceFront.style.backgroundSize = "237px 451px";
+			var colorizeSVG = document.querySelectorAll(".colorizeSVG");
+			var outputColor;
 
-			var deviceBack = document.getElementById("colorize-bck");
-			deviceBack.style.background = "url(img/device_bck-"+color+".svg) no-repeat";
-			deviceBack.style.backgroundSize = "237px 451px";
+			switch(color) {
+				case "blue":
+					outputColor = "#006699";
+					Enabler.counter('Color Blue Selected');
+					break;
+				case "orange":
+					outputColor = "#FF3300";
+					Enabler.counter('Color Orange Selected');
+					break;
+				case "violet":
+					outputColor = "#C0208F";
+					Enabler.counter('Color Violet Selected');
+					break;
+				default:
+					break;
+			}
+
+			for (var i = 0; i < colorizeSVG.length; i++) {
+				colorizeSVG[i].setAttribute("fill", outputColor);
+			};
 
 			document.querySelectorAll("#finalBullets .color")[0].parentElement.style.display = "none";
 			document.querySelectorAll("#finalBullets .color")[1].parentElement.style.display = "none";
@@ -51,7 +67,6 @@ var banner = new Banner({
 			} else {
 				tlContinue.seek("frame5");
 			}
-			
 		},
 		exitShop: function(){
 			Enabler.requestCollapse();

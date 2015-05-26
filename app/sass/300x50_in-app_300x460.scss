@@ -78,19 +78,6 @@ body {
     overflow: hidden;
     border: 1px $colorGray solid;
 
-	// #generalClose {
-	//     width: 20px;
-	//     height: 20px;
-	//     background: url(../img/close.png);
-	//     background-size: contain;
-	//     position: absolute;
-	//     z-index: 1000;
-	//     top: 5px;
-	//     right: 5px;
-	//     display: block;
-	//     cursor: pointer;
-	// }
-
 	#logo {
 	    margin-left: $verizonTabMargin;
 	    margin-top: 0;
@@ -143,7 +130,6 @@ body {
 			    opacity: $opacityCero;
 
 			    #colorize-bck {
-					background: url(../img/device_bck-orange.svg) no-repeat;
 					background-size: 237px 451px;
 					width: 237px;
 					height: 451px;
@@ -175,7 +161,6 @@ body {
 				}
 
 				#colorize-fte {
-					background: url(../img/device_fte-orange.svg) no-repeat;
 					background-size: 237px 451px;
 					width: 233px;
 					height: 451px;
