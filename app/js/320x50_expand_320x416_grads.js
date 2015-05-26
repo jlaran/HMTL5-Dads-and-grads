@@ -209,6 +209,8 @@ var banner = new Banner({
 						.to(".bullets .orange", 0.5, {opacity:1}, "-=0.3")
 						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");
+
+						//stats.setTimeline(tlDevice);
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();
