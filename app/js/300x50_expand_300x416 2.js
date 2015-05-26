@@ -24,29 +24,13 @@ var banner = new Banner({
 			var indexOfColor = colorArray.indexOf(color);
 			colorArray.splice(indexOfColor, 1);
 
-			var colorizeSVG = document.querySelectorAll(".colorizeSVG");
-			var outputColor;
+			var deviceFront = document.getElementById("colorize-fte");
+			deviceFront.style.background = "url(img/device_fte-"+color+".svg) no-repeat";
+			deviceFront.style.backgroundSize = "237px 451px";
 
-			switch(color) {
-				case "blue":
-					outputColor = "#006699";
-					break;
-				case "orange":
-					outputColor = "#FF3300";
-					break;
-				case "violet":
-					outputColor = "#C0208F";
-					break;
-				default:
-					break;
-			}
-
-			//console.log(colorizeSVG);
-
-			for (var i = 0; i < colorizeSVG.length; i++) {
-				console.log(colorizeSVG[i].getAttribute("fill"));
-				colorizeSVG[i].setAttribute("fill", outputColor);
-			};
+			var deviceBack = document.getElementById("colorize-bck");
+			deviceBack.style.background = "url(img/device_bck-"+color+".svg) no-repeat";
+			deviceBack.style.backgroundSize = "237px 451px";
 
 			document.querySelectorAll("#finalBullets .color")[0].parentElement.style.display = "none";
 			document.querySelectorAll("#finalBullets .color")[1].parentElement.style.display = "none";
@@ -210,15 +194,12 @@ var banner = new Banner({
 						.to(".bullets .orange", 0.5, {opacity:1}, "-=0.3")
 						.to(".bullets .violet", 0.3, {opacity:1}, "-=0.1")
 						.to("#ff_txt1", 0.7, {opacity:1}, "-=0.5");
-
-						stats.setTimeline(tlContinue);
 		},
 		expandStartAnimation : function(){
             var expand = new TimelineMax();
             expand.to("#expanded-banner", 0.3, {opacity:1, display: 'block', onComplete: this.secondFrame});
         },
         collapseStartAnimation: function(){
-        	Enabler.reportManualClose();
         	var collapse = new TimelineMax();
             collapse.to("#expanded-banner", 0.3, {opacity:0, display: 'none'});
             motionLibrary.resetWhenCloseOrExit();
