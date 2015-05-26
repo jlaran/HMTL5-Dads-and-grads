@@ -61,6 +61,8 @@ var banner = new Banner({
 
 			document.querySelector("#finalBullets ."+colorArray[0]).parentElement.classList.add("firstChild");
 
+			document.getElementById("colorize-fte").width = "233px";
+
 			if(firstTime == true){
 				tlContinue.restart();
 				firstTime = false;
@@ -213,9 +215,18 @@ var banner = new Banner({
             expand.to("#expanded-banner", 0.3, {opacity:1, display: 'block', onComplete: this.secondFrame});
         },
         collapseStartAnimation: function(){
+        	Enabler.reportManualClose();
         	var collapse = new TimelineMax();
             collapse.to("#expanded-banner", 0.3, {opacity:0, display: 'none'});
             motionLibrary.resetWhenCloseOrExit();
+
+            var colorizeSVG = document.querySelectorAll(".colorizeSVG");
+
+			for (var i = 0; i < colorizeSVG.length; i++) {
+				colorizeSVG[i].setAttribute("fill", "#FF3300");
+			};
+
+			document.getElementById("colorize-fte").width = "233px";
         }
 	}
 });
